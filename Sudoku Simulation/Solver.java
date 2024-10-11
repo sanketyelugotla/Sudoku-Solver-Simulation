@@ -8,7 +8,7 @@ public class Solver {
     public static boolean solveSudoku(int[][] board) {
         n = board.length;
         int speed;
-        if (n == 9) speed = 100;
+        if (n == 9) speed = 95;
         else speed = 500;
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < n; j++) {
@@ -17,7 +17,6 @@ public class Solver {
                         if (isSafe(i, j, dig, board)) {
                             board[i][j] = dig;
                             setUpdated(i, j);
-                            print(board);
                             updateBoard(board, i, j);
                             try {
                                 Thread.sleep(speed);
@@ -29,7 +28,6 @@ public class Solver {
                                 board[i][j] = -1;
                                 resetUpdated(i, j);
                                 updateBoard(board, i, j);
-                                print(board);
                                 try {
                                     Thread.sleep(speed);
                                 } catch (InterruptedException e) {
