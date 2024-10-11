@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 import static GFG.Solver.print;
 import static GFG.Solver.solveSudoku;
-import static SPC.Project.GUI.printBoard;
+import static SPC.Project.GUI.displayBoard;
 
 public class SudokuSimulation {
     public static void main(String[] args) {
@@ -66,7 +66,7 @@ public class SudokuSimulation {
                 board = board4;
             }
         }
-        printBoard(board);
+        displayBoard(board);
         answer = solveSudoku(board);
         if (answer) print(board);
         else System.out.println("This Sudoku is unsolvable");

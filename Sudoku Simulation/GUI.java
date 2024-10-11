@@ -9,7 +9,7 @@ public class GUI {
     private static JButton[][] buttons;
     private static boolean[][] updatedCells;
 
-    public static void printBoard(int[][] board) {
+    public static void displayBoard(int[][] board) {
         n = board.length;
         buttons = new JButton[n][n]; // Initialize buttons array with correct dimensions
         updatedCells = new boolean[n][n]; // Initialize the array to track updated cells
